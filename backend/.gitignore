@@ -1,0 +1,7 @@
+node_modules/
+.env
+uploads/productos/*.jpg
+uploads/productos/*.png
+uploads/productos/*.webp
+uploads/productos/*.gif
+*.pdf
