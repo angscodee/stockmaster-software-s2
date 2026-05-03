@@ -26,7 +26,7 @@ const ProductCard = ({ producto }: ProductCardProps) => {
 
   const precioVenta = parseFloat(String(producto.precio_venta || 0));
   const precioOferta = producto.precio_oferta ? parseFloat(String(producto.precio_oferta)) : null;
-  const isOutOfStock = (producto.stock?.stock_disponible || 0) <= 0;
+  const isOutOfStock = ((producto.stock?.stock_disponible ?? (producto.stock?.stock_fisico || 0) - (producto.stock?.stock_reservado || 0))) <= 0;
 
   return (
     <Link 
