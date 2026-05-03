@@ -41,7 +41,7 @@ export default function ClientesAdmin() {
           </div>
           <div>
             <p className="font-medium text-gray-900">{info.getValue() as string}</p>
-            <p className="text-[10px] text-gray-400">ID Cliente: {info.row.original.id} | ID User: {info.row.original.usuario_id}</p>
+            <p className="text-[10px] text-gray-400">ID Cliente: {info.row.original.id} | ID User: {(info.row.original as any).usuario_id}</p>
           </div>
         </div>
       )
