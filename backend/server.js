@@ -21,7 +21,8 @@ const PORT = process.env.PORT || 5001;
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
-  process.env.FRONTEND_URL, // ej: https://stockmaster.vercel.app
+  'https://stockmaster-software-s2-q4i4.vercel.app',
+  process.env.FRONTEND_URL,
 ].filter(Boolean);
 
 app.use(cors({
