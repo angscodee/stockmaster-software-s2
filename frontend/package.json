@@ -28,9 +28,7 @@
     "@hookform/resolvers": "^3.3.4",
     "@tanstack/react-table": "^8.13.2",
     "jspdf": "^2.5.1",
-    "jspdf-autotable": "^3.8.2"
-  },
-  "devDependencies": {
+    "jspdf-autotable": "^3.8.2",
     "vite": "^5.1.6",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.4.3",
