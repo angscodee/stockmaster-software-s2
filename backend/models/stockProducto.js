@@ -6,7 +6,12 @@ const StockProducto = sequelize.define('StockProducto', {
   producto_id: { type: DataTypes.INTEGER, unique: true, allowNull: false },
   stock_fisico: { type: DataTypes.INTEGER, defaultValue: 0 },
   stock_reservado: { type: DataTypes.INTEGER, defaultValue: 0 },
-  stock_disponible: { type: DataTypes.INTEGER, readOnly: true }
+  stock_disponible: {
+    type: DataTypes.VIRTUAL,
+    get() {
+      return (this.stock_fisico || 0) - (this.stock_reservado || 0);
+    }
+  }
 }, {
   tableName: 'inv_stock_producto',
   timestamps: true,
